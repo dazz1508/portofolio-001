@@ -1,145 +1,213 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portodaz - Dandi Bagas</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/logos.png" />
-</head>
-<body>
+/* --- RESET & GLOBAL STYLE --- */
+* {
+    margin: 0; /* Menghapus margin bawaan browser agar tidak ada celah kosong */
+    padding: 0; /* Menghapus padding bawaan browser */
+    box-sizing: border-box; /* Memastikan ukuran elemen dihitung termasuk padding & border */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Menggunakan font yang bersih dan modern */
+}
 
-    <header>
-        <nav>
-            <div class="logo">my<span>Porto</span></div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#proyek">Proyek</a></li>
-                <li><a href="#medsos">Medsos</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    background-color: #ffffff; /* Latar belakang putih */
+    color: #1a1a1a; /* Warna teks hitam yang nyaman di mata */
+    line-height: 1.6; /* Jarak antar baris teks agar mudah dibaca */
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu navigasi */
+}
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p>Hi, Welcome to My Website</p>
-            <h1>dandi</h1>
-            <p>
-                Website ini merupakan website portofolio saya yang merupakan deskripsi
-                singkat tentang saya.
-            </p>
-            <a href="#about" class="btn-hero">About Me</a>
-        </div>
-        <div class="hero-logo">
-            <img src="WhatsApp Image 2026-02-09 at 14.28.46 (1).jpeg" alt="dandibagas" />
-        </div>
-    </section>
+/* --- NAVIGASI --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee; /* Garis pembatas tipis di bawah menu */
+    position: sticky; /* Menempel di atas saat di-scroll */
+    top: 0;
+    z-index: 1000; /* Memastikan menu selalu di lapisan paling atas */
+}
 
-    <section id="about" class="container about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                Nama saya <strong>dandi bagas</strong>, berasal dari
-                <strong>surabaya</strong>, dan merupakan pelajar
-                <strong>sma ipiems surabaya</strong>. Saya memiliki minat di bidang
-                teknologi dan digital, serta terbiasa berpikir logis dan terstruktur
-                dalam menyelesaikan masalah.
-            </p>
-            <p>
-                Saya fokus mengembangkan kemampuan di bidang teknologi dan terus
-                belajar mengikuti perkembangannya. Di waktu luang, saya menyukai
-                <strong>futsal, badminton, dan bermain PUBG Mobile</strong> sebagai
-                sarana menjaga keseimbangan aktivitas.
-            </p>
-            <p>
-                Ke depan, saya ingin terus berkembang dan memanfaatkan teknologi
-                secara positif serta bermanfaat.
-            </p>
-        </div>
-    </section>
+nav {
+    display: flex; /* Mengatur tata letak flexbox */
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
+    align-items: center; /* Meratakan konten ke tengah secara vertikal */
+    padding: 20px 10%; /* Memberi ruang di dalam navigasi */
+}
 
-    <section id="proyek" class="container bg-light proyek">
-        <h2>Proyek Saya</h2>
-        <div class="proyek-grid">
-            <a href="https://drive.google.com/file/d/198vW01_a7eOTs8vo-eJg9VZORugkf9yn/view?usp=drive_link" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="ExcelProject" />
-                <div class="proyek-info">
-                    <h3>Excel</h3>
-                    <p>My Excel Project</p>
-                </div>
-            </a>
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: lowercase; /* Membuat logo terlihat minimalis */
+}
 
-            <a href="https://www.tinkercad.com/things/iu9Qv6jO7ee-terrific-juttuli" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="ArduinoLed" />
-                <div class="proyek-info">
-                    <h3>ArduinoLED</h3>
-                    <p>Arduino LED Control Project</p>
-                </div>
-            </a>
+.logo span {
+    color: #888; /* Memberi warna abu-abu pada kata 'Porto' */
+}
 
-            <a href="https://www.tinkercad.com/things/2dkK3mmvhyP-projek-lcd?sharecode=U2b_GEFrHhoAgYLUIQtHe1WLW3vQIOzCa7z5u2SsOcc" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="ArduinoLyric" />
-                <div class="proyek-info">
-                    <h3>Arduino Lirik</h3>
-                    <p>Arduino Lyric Display Project</p>
-                </div>
-            </a>
+nav ul {
+    display: flex;
+    list-style: none; /* Menghilangkan titik-titik pada daftar menu */
+}
 
-            <a href="https://drive.google.com/file/d/1AmJmifKMs_7lxQmLvO1jDOCbuYKc9cwo/view?usp=drive_link" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="Flowchart Project" />
-                <div class="proyek-info">
-                    <h3>Flowchart</h3>
-                    <p>My Flowchart Project</p>
-                </div>
-            </a>
+nav ul li {
+    margin-left: 30px; /* Jarak antar menu navigasi */
+}
 
-            <a href="https://dazz1508.github.io/portofolio-001/" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="Website Project" />
-                <div class="proyek-info">
-                    <h3>Website Sederhana</h3>
-                    <p>My Website Project</p>
-                </div>
-            </a>
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: 0.3s; /* Efek transisi halus saat di-hover */
+}
 
-            <a href="https://dazz1508.github.io/psaj_kel005/" target="_blank" class="proyek-card">
-                <img src="project1.png" alt="PSAJ Project" />
-                <div class="proyek-info">
-                    <h3>Website PSAJ</h3>
-                    <p>Website PSAJ Non Tulis</p>
-                </div>
-            </a>
-        </div>
-    </section>
+nav ul li a:hover {
+    color: #888; /* Berubah warna saat mouse diarahkan ke menu */
+}
 
-    <section id="medsos" class="container medsos">
-        <h2>Media Sosial</h2>
-        <div class="medsos-list">
-            <a href="https://github.com/dazz1508" target="_blank" class="medsos-item">
-                <img src="gbr_github.png" alt="GitHub" />
-                <span>Github</span>
-            </a>
+/* --- HERO SECTION --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: #000;
+    color: #fff;
+}
 
-            <a href="https://instagram.com/username" target="_blank" class="medsos-item">
-                <img src="gbr_ig.png" alt="Instagram" />
-                <span>Instagram</span>
-            </a>
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 10px 0;
+}
 
-            <a href="https://tiktok.com/username" target="_blank" class="medsos-item">
-                <img src="gbr_tiktok.png" alt="TikTok" />
-                <span>TikTok</span>
-            </a>
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-            <a href="https://linkedin.com/in/username" target="_blank" class="medsos-item">
-                <img src="gbr_linkedin.png" alt="LinkedIn" />
-                <span>LinkedIn</span>
-            </a>
-        </div>
-    </section>
+.btn-hero:hover {
+    background-color: #888;
+    color: #fff;
+}
 
-    <footer>
-        <p>© 2026 dandibagasprojek</p>
-    </footer>
+.hero-logo img {
+    width: 350px; /* Sedikit diperbesar agar proporsional */
+    height: auto;
+    border-radius: 20px; /* Membuat sudut foto agak melengkung */
+    object-fit: cover;
+    /* FILTER DIHAPUS agar warna foto asli muncul */
+}
 
-</body>
-</html>
+/* Tambahkan sedikit media query agar responsif di HP */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 50px 10%;
+    }
+    .hero-logo img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+/* --- ABOUT SECTION --- */
+.about {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 20px; /* Membuat paragraf di tengah */
+    color: #555;
+}
+
+/* --- PROYEK GRID --- */
+.proyek {
+    padding: 80px 10%;
+    background-color: #fcfcfc;
+}
+
+.proyek h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.proyek-grid {
+    display: grid; /* Mengaktifkan sistem grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif otomatis */
+    gap: 30px; /* Jarak antar kartu proyek */
+}
+
+.proyek-card {
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: 0.4s ease;
+}
+
+.proyek-card img {
+    width: 100%; /* Gambar memenuhi lebar kartu */
+    height: 200px;
+    object-fit: cover; /* Gambar tidak penyok */
+}
+
+.proyek-info {
+    padding: 20px;
+}
+
+.proyek-card:hover {
+    transform: translateY(-10px); /* Efek melayang saat di-hover */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Bayangan halus */
+}
+
+/* --- MEDSOS SECTION --- */
+.medsos {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.medsos-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.medsos-item {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.medsos-item img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.medsos-item:hover {
+    opacity: 0.6; /* Efek transparan saat di-hover */
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
