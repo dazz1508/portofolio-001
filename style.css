@@ -1,0 +1,213 @@
+/* --- RESET & GLOBAL STYLE --- */
+* {
+    margin: 0; /* Menghapus margin bawaan browser agar tidak ada celah kosong */
+    padding: 0; /* Menghapus padding bawaan browser */
+    box-sizing: border-box; /* Memastikan ukuran elemen dihitung termasuk padding & border */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Menggunakan font yang bersih dan modern */
+}
+
+body {
+    background-color: #ffffff; /* Latar belakang putih */
+    color: #1a1a1a; /* Warna teks hitam yang nyaman di mata */
+    line-height: 1.6; /* Jarak antar baris teks agar mudah dibaca */
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu navigasi */
+}
+
+/* --- NAVIGASI --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee; /* Garis pembatas tipis di bawah menu */
+    position: sticky; /* Menempel di atas saat di-scroll */
+    top: 0;
+    z-index: 1000; /* Memastikan menu selalu di lapisan paling atas */
+}
+
+nav {
+    display: flex; /* Mengatur tata letak flexbox */
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
+    align-items: center; /* Meratakan konten ke tengah secara vertikal */
+    padding: 20px 10%; /* Memberi ruang di dalam navigasi */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: lowercase; /* Membuat logo terlihat minimalis */
+}
+
+.logo span {
+    color: #888; /* Memberi warna abu-abu pada kata 'Porto' */
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Menghilangkan titik-titik pada daftar menu */
+}
+
+nav ul li {
+    margin-left: 30px; /* Jarak antar menu navigasi */
+}
+
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: 0.3s; /* Efek transisi halus saat di-hover */
+}
+
+nav ul li a:hover {
+    color: #888; /* Berubah warna saat mouse diarahkan ke menu */
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: #000;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #888;
+    color: #fff;
+}
+
+.hero-logo img {
+    width: 350px; /* Sedikit diperbesar agar proporsional */
+    height: auto;
+    border-radius: 20px; /* Membuat sudut foto agak melengkung */
+    object-fit: cover;
+    /* FILTER DIHAPUS agar warna foto asli muncul */
+}
+
+/* Tambahkan sedikit media query agar responsif di HP */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 50px 10%;
+    }
+    .hero-logo img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+/* --- ABOUT SECTION --- */
+.about {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 20px; /* Membuat paragraf di tengah */
+    color: #555;
+}
+
+/* --- PROYEK GRID --- */
+.proyek {
+    padding: 80px 10%;
+    background-color: #fcfcfc;
+}
+
+.proyek h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.proyek-grid {
+    display: grid; /* Mengaktifkan sistem grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif otomatis */
+    gap: 30px; /* Jarak antar kartu proyek */
+}
+
+.proyek-card {
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: 0.4s ease;
+}
+
+.proyek-card img {
+    width: 100%; /* Gambar memenuhi lebar kartu */
+    height: 200px;
+    object-fit: cover; /* Gambar tidak penyok */
+}
+
+.proyek-info {
+    padding: 20px;
+}
+
+.proyek-card:hover {
+    transform: translateY(-10px); /* Efek melayang saat di-hover */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Bayangan halus */
+}
+
+/* --- MEDSOS SECTION --- */
+.medsos {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.medsos-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.medsos-item {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.medsos-item img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.medsos-item:hover {
+    opacity: 0.6; /* Efek transparan saat di-hover */
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
